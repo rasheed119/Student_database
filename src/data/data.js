@@ -1,37 +1,37 @@
 const data = [
   {
     name: "M.Abdur Rasheed",
-    gender: "male",
+    gender: "Male",
     batch: "B45WD",  
     qualification: "B.E.Mechanical"
   },
   {
     name: "RajeshKumar",
-    gender: "male",
+    gender: "Male",
     batch: "B45WD",
     qualification: "BSC"
   },
   {
     name: "Anitha",
-    gender: "female",
+    gender: "Female",
     batch: "B45WD",
     qualification: "BSC"
   },
   {
     name: "Abdulwasim",
-    gender: "male",
+    gender: "Male",
     batch: "B45WD",
     qualification: "B.E-Mech"
   },
   {
     name: "Anirutha",
-    gender: "female",
+    gender: "Female",
     batch: "B45WD",
     qualification: "BCA"
   },
   {
     name: "Kavin",
-    gender: "male",
+    gender: "Male",
     batch: "B45WD",
     qualification: "B.E-Mech"
   }
