@@ -9,6 +9,12 @@ import Addstudents from "./Addstudents.js"
 
 function Students() {
   const [student, setstudent] = useState(data);
+
+  const deletestudent = (idx)=>{
+    const remaining_data = student.filter((studobj,index)=> index !==idx);
+    setstudent(remaining_data);
+  }
+
   return (
     <div>
       <Base
@@ -37,7 +43,9 @@ function Students() {
                   Gender :{stud.gender}
                 </Card.Text>
                 <Button variant="primary">Edit</Button>
-                <Button variant="danger">Delete</Button>
+                <Button variant="danger"
+                onClick = {()=>deletestudent(idx)}
+                >Delete</Button>
               </Card.Body>
             </Card>
 
