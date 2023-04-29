@@ -6,9 +6,11 @@ import Button from 'react-bootstrap/Button';
 import data from "../data/data.js"
 import { useState } from "react";
 import Addstudents from "./Addstudents.js"
+import Updatestudents from "./Updatestudents"
 
 function Students() {
   const [student, setstudent] = useState(data);
+  const [index, setindex] = useState();
 
   const deletestudent = (idx)=>{
     const remaining_data = student.filter((studobj,index)=> index !==idx);
@@ -23,10 +25,23 @@ function Students() {
       >
 
         <div className="container">
+
+
           <Addstudents
           student = {student}
           setstudent = {setstudent}
           />
+
+          <br/>
+
+          <Updatestudents
+          student = {student}
+          setstudent = {setstudent}
+          index = {index}
+          />
+
+          <br/>
+
           <div className="card-container">
 
           {student.map((stud, idx)=>(
@@ -42,7 +57,9 @@ function Students() {
                 </Card.Text>                <Card.Text>
                   Gender :{stud.gender}
                 </Card.Text>
-                <Button variant="primary">Edit</Button>
+                <Button variant="primary"
+                onClick = {()=>setindex(idx)}
+                >Edit</Button>
                 <Button variant="danger"
                 onClick = {()=>deletestudent(idx)}
                 >Delete</Button>
